@@ -1,0 +1,36 @@
+<DataProfile version="2" readOnly="False" startFinishDistanceThreshold="40" showDistanceThreshold="True" ignoreFirstLap="True" ignoreLastLap="True" lapTimeHoldSecs="5" isChaseCamData="False" isAimData="False" isDriftBoxData="False" sortByTime="False" autoSync="False" autoSyncOffset="0">
+  <HeaderLines>
+    <HeaderLineIndex>0</HeaderLineIndex>
+  </HeaderLines>
+  <DataStartLineIndex>1</DataStartLineIndex>
+  <DataValueSeparators>,;	</DataValueSeparators>
+  <UseEuroDecimalFormat>False</UseEuroDecimalFormat>
+  <FileLineMatchers />
+  <Calculators>
+    <DegreesToCartesianConverter inputUnit="Degrees" outputUnit="Feet" algorithm="SphericalMercator">
+      <InputColumns>
+        <InputColumn>GPS_coord[0]</InputColumn>
+        <InputColumn>GPS_coord[1]</InputColumn>
+      </InputColumns>
+      <OutputColumns>
+        <OutputColumn>GPS_X</OutputColumn>
+        <OutputColumn>GPX_Y</OutputColumn>
+      </OutputColumns>
+    </DegreesToCartesianConverter>
+  </Calculators>
+  <ColumnMappings>
+    <ColumnMapping inputColumnText="Time of video (s)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="&lt;Required&gt;" dataType="Data Running Time, Seconds" />
+    <ColumnMapping inputColumnText="GPS_coord[0]" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Latitude / Y Position (Degrees)" />
+    <ColumnMapping inputColumnText="GPS_coord[1]" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Longitude / X Position (Degrees)" />
+    <ColumnMapping inputColumnText="GPS dist trav (m)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Distance (Meters)" />
+    <ColumnMapping inputColumnText="GPS dist home (m)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Distance from Beginning (Meters)" />
+    <ColumnMapping inputColumnText="GPS_speed (km/h)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Velocity" dataType="Speed (KPH)" />
+    <ColumnMapping inputColumnText="Total Motor Power (VA)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Engine, Transmission" dataType="Horsepower" />
+    <ColumnMapping inputColumnText="BaroAlt (m)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Altitude / Z Position (Meters)" />
+    <ColumnMapping inputColumnText="rcCommand[1]" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Steering, Throttle, Brakes" dataType="Throttle Position" />
+    <ColumnMapping inputColumnText="GPS_X" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Longitude / X Position (Feet)" />
+    <ColumnMapping inputColumnText="GPX_Y" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Latitude / Y Position (Feet)" />
+    <ColumnMapping inputColumnText="Acceleration total (g)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="G-Forces" dataType="Acceleration Gs" />
+    <ColumnMapping inputColumnText="GPS_ground_course" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Heading" />
+  </ColumnMappings>
+</DataProfile>
