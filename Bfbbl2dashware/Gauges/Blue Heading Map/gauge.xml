@@ -1,0 +1,30 @@
+<Gauge version="3" x="0" y="0" readOnly="False" width="403.2899" height="322.632" transparency="1" rotation="0" thumbnailBackgroundTransparency="1" thumbnailBackgroundRed="135" thumbnailBackgroundGreen="206" thumbnailBackgroundBlue="235">
+  <Components>
+    <Map x="0" y="0" width="403.2899" height="322.632" align="Center" vAlign="Center" EvenPenWidth="6" EvenTransparency="1" EvenRed="231" EvenGreen="233" EvenBlue="243" OddPenWidth="9" OddTransparency="1" OddRed="252" OddGreen="251" OddBlue="2">
+      <Inputs>
+        <Input name="X">X</Input>
+        <Input name="Y">Y</Input>
+      </Inputs>
+    </Map>
+    <Map x="0.7650146" y="0.7650146" width="403.2899" height="322.632" align="Center" vAlign="Center" EvenPenWidth="2" EvenTransparency="0.6156863" EvenRed="9" EvenGreen="12" EvenBlue="190" OddPenWidth="3" OddTransparency="1" OddRed="252" OddGreen="251" OddBlue="2">
+      <Components>
+        <MapPositionImage x="0" y="0" transparency="1" width="17" height="17" src="Marker.png">
+          <Inputs>
+            <Input name="X">X</Input>
+            <Input name="Y">Y</Input>
+            <Input name="Heading">Heading</Input>
+          </Inputs>
+        </MapPositionImage>
+      </Components>
+      <Inputs>
+        <Input name="X">X</Input>
+        <Input name="Y">Y</Input>
+      </Inputs>
+    </Map>
+  </Components>
+  <Inputs>
+    <Input category="Positional" name="Longitude / X Position (Feet)" fromFastestLapSamePos="False">X</Input>
+    <Input category="Positional" name="Latitude / Y Position (Feet)" fromFastestLapSamePos="False">Y</Input>
+    <Input category="Positional" name="Heading" fromFastestLapSamePos="False">Heading</Input>
+  </Inputs>
+</Gauge>

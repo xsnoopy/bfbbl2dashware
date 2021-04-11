@@ -1,0 +1,78 @@
+<Gauge version="3" x="0" y="0" readOnly="False" width="360.7931" height="780.4407" transparency="1" rotation="0" thumbnailBackgroundTransparency="1" thumbnailBackgroundRed="0" thumbnailBackgroundGreen="0" thumbnailBackgroundBlue="0">
+  <Components>
+    <Text x="41.32434" y="22" text="Distance Home" fontRectWidth="238.4095" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="9.536377" y="46.76819" displayType="Decimal" decimalPrecision="1" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Distance from Beginning (Meters)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="294.0385" y="61.07275" text="m" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="123.0592" displayType="Decimal" decimalPrecision="1" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Distance (Meters)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="294.0385" y="135.7744" text="m" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="200.9397" displayType="Decimal" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Speed Lap Max (KPH)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="41.32434" y="100.5624" text="Distance Traveled" fontRectWidth="286.0914" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="41.32434" y="180.0322" text="Maximum Speed" fontRectWidth="286.0914" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="294.0385" y="215.2443" text="km/h" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="280.4095" displayType="Decimal" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Acceleration Gs</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="41.32434" y="257.5021" text="Maximum G-force" fontRectWidth="286.0914" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="294.0385" y="294.7141" text="g" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="359.8794" displayType="Decimal" decimalPrecision="0" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Engine Oil Temperature (C)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="41.32434" y="336.9719" text="Maximum Motor Power" fontRectWidth="309.9324" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="294.0385" y="374.184" text="VA" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="439.3492" displayType="Decimal" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Battery Voltage</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="41.32434" y="413.4417" text="Battery Voltage" fontRectWidth="286.0914" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="294.0385" y="453.6538" text="V" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="41.32434" y="494.9116" text="Min. Battery Voltage" fontRectWidth="325.8264" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="518.8191" displayType="Decimal" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Engine Oil Pressure (kPa)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="294.0385" y="533.1237" text="V" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="598.2889" displayType="Decimal" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Engine Oil Pressure (psi)</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="294.0385" y="612.5934" text="A" fontRectWidth="79.46984" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <Text x="41.32434" y="574.3813" text="Maximum Ampere" fontRectWidth="317.8794" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+    <DynamicText x="11.12573" y="659.2889" displayType="Integer" decimalPrecision="2" showPlus="False" restrictRange="False" restrictedMinValue="-3.40282346638529E+38" restrictedMaxValue="3.40282346638529E+38" convertFromGMT="True" fontRectWidth="286.0914" fontRectHeight="60.39708" fontFace="Courier New" fontSize="42.91372" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="right" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Satellite Count</Input>
+      </Inputs>
+    </DynamicText>
+    <Text x="41.32434" y="663.3813" text="Satelites" fontRectWidth="317.8794" fontRectHeight="39.73492" fontFace="Courier New" fontSize="19.07276" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+  </Components>
+  <Inputs>
+    <Input category="Positional" name="Distance from Beginning (Meters)" fromFastestLapSamePos="False">Distance from Beginning (Meters)</Input>
+    <Input category="Positional" name="Distance (Meters)" fromFastestLapSamePos="False">Distance (Meters)</Input>
+    <Input category="Velocity" name="Speed Lap Max (KPH)" fromFastestLapSamePos="False">Speed Lap Max (KPH)</Input>
+    <Input category="G-Forces" name="Acceleration Gs" fromFastestLapSamePos="False">Acceleration Gs</Input>
+    <Input category="Engine, Transmission" name="Horsepower" fromFastestLapSamePos="False">Horsepower</Input>
+    <Input category="Engine, Transmission" name="Battery Voltage" fromFastestLapSamePos="False">Battery Voltage</Input>
+    <Input category="Engine, Transmission" name="Engine Oil Pressure (kPa)" fromFastestLapSamePos="False">Engine Oil Pressure (kPa)</Input>
+    <Input category="Engine, Transmission" name="Engine Oil Pressure (psi)" fromFastestLapSamePos="False">Engine Oil Pressure (psi)</Input>
+    <Input category="Engine, Transmission" name="Engine Oil Temperature (C)" fromFastestLapSamePos="False">Engine Oil Temperature (C)</Input>
+    <Input category="Positional" name="Satellite Count" fromFastestLapSamePos="False">Satellite Count</Input>
+  </Inputs>
+</Gauge>

@@ -1,0 +1,93 @@
+<Project version="2">
+  <Information logoX="-1" logoY="-1" logoWidth="-1" logoHeight="-1">
+    <StartTitle enabled="False" duration="3" fadeIn="False" fadeInDuration="1" fadeOut="False" fadeOutDuration="1" fontRectWidth="1" fontRectHeight="1" fontFace="Arial" fontSize="64" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="center" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" backgroundTransparency="0" backgroundRed="255" backgroundGreen="255" backgroundBlue="255">
+    </StartTitle>
+    <EndTitle enabled="False" duration="3" fadeIn="False" fadeInDuration="1" fadeOut="False" fadeOutDuration="1" fontRectWidth="1" fontRectHeight="1" fontFace="Arial" fontSize="64" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="center" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" backgroundTransparency="0" backgroundRed="255" backgroundGreen="255" backgroundBlue="255">
+    </EndTitle>
+  </Information>
+  <InputSettings />
+  <OutputSettings>
+    <Video />
+    <OverscanSettings useSafeArea="False" showSafeArea="True" percentage="10" />
+  </OutputSettings>
+  <GaugeSettings>
+    <Gauge name="Dark Chart KPH" transparency="1" x="783.0776" y="865.7244">
+      <InputMapping gaugeInput="Speed" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Group1 Throttle" transparency="1" x="317.9395" y="37.87582">
+      <InputMapping gaugeInput="Throttle Position" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Acceleration Gs" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Horsepower" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Gauge KPH" transparency="1" x="-8.348051" y="215.5446">
+      <InputMapping gaugeInput="Speed" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Motor Power" transparency="1" x="13.50319" y="11.21019">
+      <InputMapping gaugeInput="Horsepower" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Blue Heading Map" transparency="1" x="224.6367" y="755.0175">
+      <InputMapping gaugeInput="X" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Y" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Heading" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Bataflight OSD New" transparency="1" x="1069.389" y="130.3694">
+      <InputMapping gaugeInput="Distance from Beginning (Meters)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Distance (Meters)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Speed Lap Max (KPH)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Acceleration Gs" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Horsepower" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Battery Voltage" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Engine Oil Pressure (kPa)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Engine Oil Pressure (psi)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Engine Oil Temperature (C)" fromFastestLapSamePos="False" />
+      <InputMapping gaugeInput="Satellite Count" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="G-Force gauge" transparency="1" x="-11.77338" y="455.8776">
+      <InputMapping gaugeInput="Speed" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Ampere gauge" transparency="1" x="-6.064485" y="860.6494">
+      <InputMapping gaugeInput="Speed" fromFastestLapSamePos="False" />
+    </Gauge>
+    <Gauge name="Volt gauge" transparency="1" x="-10.6316" y="658.5546">
+      <InputMapping gaugeInput="Speed" fromFastestLapSamePos="False" />
+    </Gauge>
+  </GaugeSettings>
+  <ChartSettings>
+    <ChartTab Type="Time">
+      <Inputs />
+      <Charts>
+        <Chart ChartType="Map">
+          <Graphs>
+            <Graph />
+          </Graphs>
+        </Chart>
+        <Chart ChartType="G-Plot">
+          <Graphs>
+            <Graph />
+          </Graphs>
+        </Chart>
+        <Chart ChartType="LineChart">
+          <Graphs />
+        </Chart>
+      </Charts>
+    </ChartTab>
+    <ChartTab Type="Distance">
+      <Inputs />
+      <Charts>
+        <Chart ChartType="Map">
+          <Graphs>
+            <Graph />
+          </Graphs>
+        </Chart>
+        <Chart ChartType="G-Plot">
+          <Graphs>
+            <Graph />
+          </Graphs>
+        </Chart>
+        <Chart ChartType="LineChart">
+          <Graphs />
+        </Chart>
+      </Charts>
+    </ChartTab>
+  </ChartSettings>
+</Project>

@@ -1,0 +1,18 @@
+<Gauge version="3" x="0" y="0" readOnly="False" width="200" height="200" transparency="1" rotation="0" thumbnailBackgroundTransparency="1" thumbnailBackgroundRed="135" thumbnailBackgroundGreen="206" thumbnailBackgroundBlue="235">
+  <Components>
+    <AnalogFace x="99" y="99" arcRadius="97.05882" labelOffset="29.11765" syncValueRangeWithParent="False" syncAngleRangeWithParent="False" autoMinValue="False" restrictMinValue="False" lowestMinValue="0" highestMinValue="100" minValue="0" autoMaxValue="True" restrictMaxValue="False" lowestMaxValue="10" highestMaxValue="1000000" maxValue="100" minAngle="-225" maxAngle="45" arcPenWidth="1.941177" arcTransparency="1" arcRed="255" arcGreen="255" arcBlue="255" minorTickUnit="2" minorTickLength="7.764707" minorTickPenWidth="1.941177" minorTickTransparency="1" minorTickRed="255" minorTickGreen="255" minorTickBlue="255" majorTickUnit="10" majorTickLength="15.52942" majorTickPenWidth="1.941177" majorTickTransparency="1" majorTickRed="255" majorTickGreen="255" majorTickBlue="255" fontFace="Arial" fontSize="15.52942" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="center" fontVAlign="center" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255">
+      <Inputs>
+        <Input name="Value">Horsepower</Input>
+      </Inputs>
+    </AnalogFace>
+    <Needle x="100" y="98" length="69" offset="0" loop="False" syncValueRangeWithParent="False" syncAngleRangeWithParent="False" autoMinValue="True" restrictMinValue="False" lowestMinValue="0" highestMinValue="100" minValue="0" autoMaxValue="True" restrictMaxValue="False" lowestMaxValue="10" highestMaxValue="1000000" maxValue="100" minAngle="-225" maxAngle="45" penWidth="6" transparency="1" red="255" green="255" blue="255">
+      <Inputs>
+        <Input name="Value">Horsepower</Input>
+      </Inputs>
+    </Needle>
+    <Text x="43" y="159" text="Watts" fontRectWidth="112" fontRectHeight="48" fontFace="Arial" fontSize="26.32258" fontBold="False" fontItalic="False" fontUnderline="False" fontDirection="horizontal" fontAlign="left" fontVAlign="top" fontTransparency="1" fontRed="255" fontGreen="255" fontBlue="255" />
+  </Components>
+  <Inputs>
+    <Input category="Engine, Transmission" name="Horsepower" fromFastestLapSamePos="False">Horsepower</Input>
+  </Inputs>
+</Gauge>
