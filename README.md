@@ -3,8 +3,9 @@ This project is used to convert Betaflight Blackbox Data telemetry and create a 
 
    1. Place the Blackbox log file in the same folder as the Phyton skript. Copy blackbox_decode in the same folder.
    2. Start the script.
-   3. Open Dashware and import the gauges.
-   4. Import your video and the converted csv file into Dashware.
+   3. Copy the dashware Project template in the Dashware template folder.
+   4. Copy the dashware Data profile in the Dashware data profile folder. 
+   5. Open Dashware Import your video and the converted csv file into Dashware.
 
 Demo Video here
-https://www.youtube.com/embed/V2nkKYzib2c
+[![Demo Video](https://img.youtube.com/vi/cBc7BIsCST4 /0.jpg)](https://www.youtube.com/watch?v=cBc7BIsCST4 )
