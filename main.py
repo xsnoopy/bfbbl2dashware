@@ -6,6 +6,7 @@
 import os
 import csv
 import math
+import subprocess
 import pathlib
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -30,15 +31,18 @@ for i in filenames:
                                         # list items with filenames machtes
                                         # a betaflight log
         currentfile = filenames[b]
-        print("Logfile file found, try to convert  " + currentfile)
-        bbdecode = str(pathlib.Path(__file__).parent.absolute()) + "/blackbox_decode --limits --unit-frame-time s " \
+        print("Logfile file found " + currentfile)
+        if filenames.count(str(filenames[b][:-3] + "01.csv")) > 0:   # Test if csv file already exists.
+            print("CSV file already exists. No conversation necessary.")
+        else:
+            bbdecode = str(pathlib.Path(__file__).parent.absolute()) + "/blackbox_decode --limits --unit-frame-time s " \
                                                                "--unit-height m --unit-rotation deg/s " \
                                                                "--unit-acceleration g --unit-gps-speed kph " \
                                                                "--merge-gps --declination-dec 7.03 " \
                                                                "--unit-vbat V --debug " + filenames[b]  # Start Blackbox decode
                                         # with parameters
-        os.system(bbdecode)             # Call blackbox_decode
-        print(" Blackbox converted successful to csv ")
+            os.system(bbdecode)             # Call blackbox_decode
+            print("Blackbox converted successful to csv ")
     b += 1   # check next file
 
 # First part done. The blackbox data should be extracted successful.
@@ -54,21 +58,25 @@ for i in filenames:
                                         # a csv file
         with open(currentfile) as csv_file:
             csv_reader = list(csv.reader(csv_file, delimiter=','))   # import csv file and create list of csv lines
-            numcolumn = len(csv_reader[0])                          # determine columns in csv file
+            numcolumn = len(csv_reader[0]) # determine columns in csv file
+            numrow = len(csv_reader)       # determine rows in csv file
             line_count = 0
             for row in csv_reader:                  # Split up GPS coordinates for each
+                if (line_count % 10000 ) == 0:      # Simple progress indication
+                    print('\r' "Calculation progress: " + str(round((float(line_count/numrow*100)), 2)) + " %" ,end="")
                 if line_count == 0:                 # Prepare header row
-                    #print(csv_reader[0])
                     csv_reader[line_count].insert(numcolumn + 1, "Time of video (s)")       # Insert Time of video
-                    csv_reader[line_count].insert(numcolumn + 2, "Vbat (V)")        # Insert GPS Latitude
+                    csv_reader[line_count].insert(numcolumn + 2, "Vbat (V)")        # Insert Motor Voltage
                     csv_reader[line_count].insert(numcolumn + 3, "Acceleration total (g)")  # Insert Acceleration
                     csv_reader[line_count].insert(numcolumn + 4, "Total Motor Power (VA)")  # Insert Motor power
                     csv_reader[line_count].insert(numcolumn + 5, "GPS dist home (m)")  # Insert GPS dist home
                     csv_reader[line_count].insert(numcolumn + 6, "GPS dist trav (m)")  # Insert GPS distance traveled home
-                    """
-                    
-                    
-                    csv_reader[line_count][32] = "Throttle %"               # Throttle in %"""
+                    csv_reader[line_count].insert(numcolumn + 7, "GPS max speed currently (km/h)")  # Insert GPS max speed
+                    csv_reader[line_count].insert(numcolumn + 8, "Acceleration max currently (g)")  # Insert Gforece max
+                    csv_reader[line_count].insert(numcolumn + 9, "Max motor power currently (VA)")  # Insert Motor Power max
+                    csv_reader[line_count].insert(numcolumn + 10, "Max current currently (A)")  # Insert current draw max
+                    csv_reader[line_count].insert(numcolumn + 11, "Min battery Voltage (V)")   # Inser Voltage minimum
+                    # csv_reader[line_count][32] = "Throttle %"               # Throttle in %"""
 
                 if line_count == 1:
                     csv_reader[line_count].insert(numcolumn + 1, float(0.0))  # Time calculation
@@ -85,6 +93,11 @@ for i in filenames:
                     csv_reader[line_count].insert(numcolumn + 6, "0.0")  # Initial travel distance set to 0
                     csv_reader[line_count][49] = csv_reader[25][49]   # Copy of a later GPS position to use at home.
                     csv_reader[line_count][50] = csv_reader[25][50]  # Copy of a later GPS position to use at home.
+                    csv_reader[line_count].insert(numcolumn + 7, "0.0")  # Initial GPS start speed set to 0
+                    csv_reader[line_count].insert(numcolumn + 8, "0.0")  # Initial Gforece max set to 0
+                    csv_reader[line_count].insert(numcolumn + 9, "0.0")  # Initial Motor Power max set to 0
+                    csv_reader[line_count].insert(numcolumn + 10, "0.0")  # Initial current draw max set to 0
+                    csv_reader[line_count].insert(numcolumn + 11, csv_reader[line_count][numcolumn + 1])  # Initial current Voltage max set to start
                     """
                     csv_reader[line_count][32] = round(float(float(csv_reader[line_count][32])
                                                              + 1024.0)/20.48, 2)  # convert throttle to %"""
@@ -113,6 +126,27 @@ for i in filenames:
                                                                       float(csv_reader[line_count - 1][50]))) +
                                                   float(csv_reader[line_count - 1][numcolumn + 5])), 2)
                                                   )  # Using the GPS coordinate to caclculate distance traveled
+                    if float(csv_reader[line_count][52]) > float(csv_reader[line_count - 1][60]):  # Compare max Gps Speed
+                        csv_reader[line_count].insert(numcolumn + 7, csv_reader[line_count][52])
+                    else:
+                        csv_reader[line_count].insert(numcolumn + 7, csv_reader[line_count - 1][60])
+                    if float(csv_reader[line_count][56]) > float(csv_reader[line_count - 1][61]):  # Compare max Geforces
+                        csv_reader[line_count].insert(numcolumn + 8, csv_reader[line_count][56])
+                    else:
+                        csv_reader[line_count].insert(numcolumn + 8, csv_reader[line_count - 1][61])
+                    if float(csv_reader[line_count][57]) > float(csv_reader[line_count - 1][62]):  # Motor Power max
+                        csv_reader[line_count].insert(numcolumn + 9, csv_reader[line_count][57])
+                    else:
+                        csv_reader[line_count].insert(numcolumn + 9, csv_reader[line_count - 1][62])
+                    if float(csv_reader[line_count][22]) > float(csv_reader[line_count - 1][63]):  # Current draw max
+                        csv_reader[line_count].insert(numcolumn + 10, csv_reader[line_count][22])
+                    else:
+                        csv_reader[line_count].insert(numcolumn + 10, csv_reader[line_count - 1][63])
+                    if float(csv_reader[line_count][numcolumn + 1]) < float(csv_reader[line_count - 1][64]):  # Battery Volatge min
+                        csv_reader[line_count].insert(numcolumn + 11, csv_reader[line_count][numcolumn + 1])
+                    else:
+                        csv_reader[line_count].insert(numcolumn + 11, csv_reader[line_count - 1][64])
+
                     """csv_reader[line_count][32] = round(float(
                         float(csv_reader[line_count][32]) + 1024.0) / 20.48,2)  # convert Throttle to %"""
                 line_count += 1
@@ -121,6 +155,9 @@ for i in filenames:
         with open('{0}_converted.csv'.format(currentfile[:-4]), mode='w') as output_file:       # add _converted to output filename
                 output_file = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 for row in csv_reader:
+                    if (line_count % 10000) == 0:  # Simple progress indication
+                        print('\r' "Write to file progress: " + str(round((float(line_count / numrow * 100)), 2)) + " %",
+                              end="")
                     output_file.writerow(csv_reader[line_count])
                     line_count += 1
         print("Converting of the CSV file successful")
