@@ -17,6 +17,16 @@
         <OutputColumn>GPX_Y</OutputColumn>
       </OutputColumns>
     </DegreesToCartesianConverter>
+    <LapSummaryCalculator>
+      <InputColumns>
+        <InputColumn>GPS_speed (km/h)</InputColumn>
+      </InputColumns>
+      <OutputColumns>
+        <OutputColumn>GPS Speed Min (km/h)</OutputColumn>
+        <OutputColumn>Speed Lap Max (KPH)</OutputColumn>
+        <OutputColumn>GPS average (km/h)</OutputColumn>
+      </OutputColumns>
+    </LapSummaryCalculator>
   </Calculators>
   <ColumnMappings>
     <ColumnMapping inputColumnText="Time of video (s)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="&lt;Required&gt;" dataType="Data Running Time, Seconds" />
@@ -32,5 +42,7 @@
     <ColumnMapping inputColumnText="GPX_Y" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Latitude / Y Position (Feet)" />
     <ColumnMapping inputColumnText="Acceleration total (g)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="G-Forces" dataType="Acceleration Gs" />
     <ColumnMapping inputColumnText="GPS_ground_course" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Positional" dataType="Heading" />
+    <ColumnMapping inputColumnText="GPS Speed Min (km/h)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Velocity" dataType="Speed Lap Min (KPH)" />
+    <ColumnMapping inputColumnText="GPS max speed currently (km/h)" inputColumnMatchMode="ExactMatch" inputColumnIgnoreCase="False" dataCategory="Velocity" dataType="Speed Lap Min (KPH)" />
   </ColumnMappings>
 </DataProfile>
